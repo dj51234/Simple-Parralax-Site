@@ -484,7 +484,7 @@ footer {
       text-align: center; }
       
 @media(max-width: 750px) {
-  #moreinfo .infoflex {
+  #moreinfo .flex-info {
       flex-direction: column;
       max-width: 500px;
   }
