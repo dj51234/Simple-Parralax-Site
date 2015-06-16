@@ -194,7 +194,7 @@ header {
   z-index: 1;
   background-color: #FFF; }
   header .logo {
-    background: url(../images/logo.png) center center no-repeat;
+    background: url(/images/logo.png) center center no-repeat;
     background-size: contain;
     width: 100%;
     height: 170px;
@@ -226,8 +226,8 @@ header {
     padding: 100px;
     background: linear-gradient(white, transparent 90%), linear-gradient(to top, white, transparent 90%), url(../images/pizza.jpg) center center fixed no-repeat; }
   #about .about-text {
-    width: 700px;
-    padding: 0;
+    max-width: 700px;
+    padding: 50px;
     margin: 0 auto; }
     #about .about-text p {
       margin-bottom: 40px; }
@@ -238,17 +238,11 @@ header {
 
 @media (max-width: 1265px) {
   #about .about-text {
-    max-width: 500px; } }
+    max-width: 600px; } }
 
 @media (max-width: 1096px) {
-  #about .grill {
-    height: 150px;
-    width: 150px;
-    margin-top: -150px; }
-  #about .cutlery {
-    height: 150px;
-    width: 150px;
-    margin-top: -150px; } }
+  #about .about-container {
+    padding: 10px; } }
 
 #food {
   color: #333;
@@ -351,7 +345,7 @@ header {
       padding: 15px 0;
       border-top: 1px solid #333; }
   #menu .perescope {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), transparent 90%), linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 90%), url(../images/header.jpg) center right fixed no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), transparent 90%), linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 90%), url(/images/header.jpg) center right fixed no-repeat;
     background-size: cover;
     margin: 100px auto 0;
     height: 500px;
@@ -385,7 +379,7 @@ header {
 #moreinfo {
   color: #333;
   text-align: center;
-  margin-bottom: 300px;
+  margin-bottom: 400px;
   position: relative;
   z-index: 2;
   background-color: #FFF; }
@@ -393,7 +387,7 @@ header {
     max-width: 700px;
     padding: 0;
     margin: 0  auto;
-    padding: 200px 0 50px; }
+    padding: 200px 10px 50px; }
     #moreinfo .info-text p {
       margin-bottom: 40px; }
     #moreinfo .info-text .info-article {
@@ -409,7 +403,7 @@ header {
     max-width: 700px;
     margin: 100px auto;
     position: relative;
-    padding-bottom: 100px; }
+    padding-bottom: 200px; }
     #moreinfo .flex-info .info-item {
       padding: 10px 20px;
       border: 1px solid #CCC;
@@ -434,6 +428,13 @@ header {
       #moreinfo .flex-info .info-btn:hover {
         color: #EEE;
         background-color: #333; }
+
+@media (max-width: 750px) {
+  #moreinfo .flex-info {
+    -webkit-flex-direction: column;
+            flex-direction: column;
+    max-width: 500px;
+    padding: 10px; } }
 
 footer {
   background-color: #111;
@@ -461,7 +462,7 @@ footer {
     -ms-flex-pack: distribute;
     margin: 0 auto;
     padding: 50px 0;
-    max-width: 96000px; }
+    max-width: 960px; }
     footer .footer-flex .flex-item ul {
       padding-left: 0px; }
     footer .footer-flex strong {
@@ -482,13 +483,24 @@ footer {
     footer .footer-flex .flex-item3 {
       max-width: 300px;
       text-align: center; }
-      
-@media(max-width: 750px) {
-  #moreinfo .infoflex {
-      flex-direction: column;
-      max-width: 500px;
-  }
-}
+
+@media (max-width: 750px) {
+  footer .footer-flex {
+    -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+    font-size: 12px;
+    max-width: 500px;
+    margin-left: -50px; }
+    footer .footer-flex .flex-item2 {
+      margin-left: -70px; }
+    footer .footer-flex .flex-item3 {
+      -webkit-flex-grow: 1;
+              flex-grow: 1;
+      min-width: 25%;
+      margin-top: 20px;
+      padding: 5px;
+      margin-left: 0px;
+      max-width: 350px; } }
 
 body {
   background-color: #FFFFF1; }
