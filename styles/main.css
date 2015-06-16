@@ -482,6 +482,13 @@ footer {
     footer .footer-flex .flex-item3 {
       max-width: 300px;
       text-align: center; }
+      
+@media(max-width: 750px) {
+  #moreinfo .infoflex {
+      flex-direction: column;
+      max-width: 500px;
+  }
+}
 
 body {
   background-color: #FFFFF1; }
